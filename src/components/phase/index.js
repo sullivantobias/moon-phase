@@ -1,3 +1,5 @@
+import './index.scss';
+
 export const Phase = ({ phaseSvg }) =>
-    <div dangerouslySetInnerHTML={{ __html: phaseSvg }} />
+    <div className='cmp-phase' dangerouslySetInnerHTML={{ __html: phaseSvg }} />
 

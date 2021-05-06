@@ -1,0 +1,21 @@
+.cmp-phaseLimit {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+        &--name {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        &--timeEvent {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
