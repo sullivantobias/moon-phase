@@ -9,7 +9,7 @@ const moonConfig = {
     texturize: true,
 }
 
-export const loadMoonPhases = async cb => {
+export const loadMoonPhases = async () => {
     const gets = []
 
     for (const i in moonConfig) {

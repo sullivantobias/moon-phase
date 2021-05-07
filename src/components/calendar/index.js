@@ -1,12 +1,17 @@
 import { Phase } from '../phase';
+
 import './index.scss';
 
 export const Calendar = ({ phases }) =>
     <div className='cmp-calendar'>
-        {Object.values(phases)?.map((phase, index) =>
-            <div key={index} className='cmp-calendar__item'>
-                <Phase phaseSvg={phase.svg} />
-            </div>
-        )}
+        <div className='cmp-calendar__wrapper'>
+            {Object.values(phases)?.map(({ svg, npWidget }, index) =>
+                <div key={index} className='cmp-calendar__wrapper__item'>
+                    <span className='cmp-calendar__wrapper__item--day'>{index + 1}</span>
+                    <Phase phaseSvg={svg} />
+                    <div className='cmp-calendar__wrapper__item--name'>{npWidget}</div>
+                </div>
+            )}
+        </div>
     </div>
 

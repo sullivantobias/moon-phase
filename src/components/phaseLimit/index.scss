@@ -1,9 +1,33 @@
+@import '../../commons/variables/colors.scss';
+@import '../../commons/variables/breakpoints.scss';
+
 .cmp-phaseLimit {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-basis: 100%;
 
     &__item {
+        flex-basis: 100%;
+        width: 230px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+
+        @include small {
+            flex-basis: 50%;
+        }
+
+        @include medium {
+            flex-basis: 25%;
+        }
+
+        &--date {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
         &--name {
             flex-basis: 100%;
             display: flex;

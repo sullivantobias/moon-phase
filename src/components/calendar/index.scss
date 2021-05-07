@@ -1,3 +1,26 @@
 .cmp-calendar {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 15%;
+            max-width: 80px;
+            padding: 10px;
+            border: 1px solid black;
+
+            &--name {
+                margin-top: 10px;
+                flex-basis: 100%;
+                text-align: center;
+                height: 30px;
+            }
+        }
+    }
 }
