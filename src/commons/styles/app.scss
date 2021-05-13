@@ -1,0 +1,46 @@
+@import '../variables/colors.scss';
+@import '../variables/breakpoints.scss';
+
+.App {
+    display: flex;
+    background: #000000;
+    background: -webkit-linear-gradient(to top, #434343, #000000);
+    background: linear-gradient(to top, #434343, #000000);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    padding: 0 3vw;
+
+    &__wrapper {
+        opacity: 0;
+        transition: opacity 1s linear;
+
+        &.loaded {
+            opacity: 1;
+        }
+
+        &__calendar {
+            &__wrapper {
+                display: flex;
+                justify-content: space-between;
+                font-size: 30px;
+                width: 100%;
+                max-width: 300px;
+                margin: 20px 0;
+
+                @include small {
+                    margin: 20px auto 20px 0;
+                }
+            }
+
+            &--chevron {
+                cursor: pointer;
+
+                &.disabled {
+                    pointer-events: none;
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+}
