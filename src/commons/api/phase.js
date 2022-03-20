@@ -1,1 +1,0 @@
-export const ENDPOINT = 'https://www.icalendar37.net/lunar/api'
